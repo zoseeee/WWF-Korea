@@ -8,7 +8,7 @@
 
 body {
   letter-spacing: 0.04em;
-  /* background-color: #000; */
+  background-color: #000;
   color: #1B1B1B;
 }
 
@@ -19,18 +19,24 @@ button {
   cursor: pointer;
 }
 
-.container {
-  width: 1500px;
-  margin: 0 auto;
+.Header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  height: 60px;
+  z-index: 999;
+  background-color: #000;
+  transition: 100ms ease-in;
 }
 
-.Header {
-  position: sticky;
-  color: #fff;
+.Header.on h1 {
+  width: 54px;
   height: 60px;
 }
 
-.hd_wrap {
+.hd_wrap .container {
   justify-content: space-between;
   align-items: center;
   text-align: center;
@@ -41,6 +47,7 @@ button {
 .hd_wrap h1 {
   width: 62px;
   height: 70px;
+  transition: 100ms ease-in;
 }
 
 .hd_wrap h1 img {
@@ -51,4 +58,123 @@ button {
 .menu_toggle {
   color: #fff;
   font-size: 30px;
+}
+
+.mainVisual {
+  height: 100vh;
+  color: #fff;
+  white-space: pre-wrap;
+  text-align: center;
+}
+
+.mainVisual figure {
+  width: 100%;
+  height: 100%;
+}
+
+.mainVisual figure img {
+  width: 100%;
+  height: 100%;
+}
+
+.mainVisual .item01 {
+  background: url(../public/assets/images/main_mb01.jpg) no-repeat center center/cover;
+}
+.mainVisual .item02 {
+  background: url(../public/assets/images/main_mb02.jpg) no-repeat center center/cover;
+}
+.mainVisual .item03 {
+  background: url(../public/assets/images/main_mb03.jpg) no-repeat center center/cover;
+}
+.mainVisual .item04 {
+  background: url(../public/assets/images/main_mb04.jpg) no-repeat center center/cover;
+}
+.mainVisual .item05 {
+  background: url(../public/assets/images/main_mb05.jpg) no-repeat center center/cover;
+}
+
+.mainVisual .visual_text {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.mainVisual figure h2 {
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 30px;
+  margin-bottom: 16px;
+}
+.mainVisual figure p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  margin-bottom: 30px;
+}
+
+.mainVisual figure span {
+  font-size: 12px;
+  font-weight: 700;
+  background-color: var(--mc);
+  padding: 8px 36px;
+}
+
+.WWFSponsor {
+  color: #ffffff;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.WWFSponsor .container {
+  width: auto;
+  margin: 0 24px;
+}
+
+.WWFSponsor .container h2 {
+  position: relative;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.WWFSponsor .container h2::after {
+  content:"";
+  width: 16px;
+  height: 2px;
+  background-color: var(--mc);
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.WWFSponsor .container p {
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
+}
+
+.WWFSponsor .container p>strong {
+  font-weight: 700;
+}
+
+.sponsor_title {
+  margin-bottom: 32px;
+}
+
+.sponsor {
+  border: 1px solid #353535;
+  border-radius: 15px;
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+      width: 1500px;
+      margin: 0 auto;
+}
+
+
 }
