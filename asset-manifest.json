@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/WWF-Korea/static/css/main.071f8d7b.css",
+    "main.js": "/WWF-Korea/static/js/main.994e7e0b.js",
+    "static/media/main_mb05.jpg": "/WWF-Korea/static/media/main_mb05.7f39380f49b1c21f2b61.jpg",
+    "static/media/main_mb01.jpg": "/WWF-Korea/static/media/main_mb01.cdbc7f9d898d63fd2fa0.jpg",
+    "static/media/main_mb02.jpg": "/WWF-Korea/static/media/main_mb02.1deb3cf7272264146362.jpg",
+    "static/media/main_mb04.jpg": "/WWF-Korea/static/media/main_mb04.e9f1eb0b915fddb69b17.jpg",
+    "static/media/main_mb03.jpg": "/WWF-Korea/static/media/main_mb03.423a8bf39d83d3ff0a38.jpg",
+    "index.html": "/WWF-Korea/index.html",
+    "main.071f8d7b.css.map": "/WWF-Korea/static/css/main.071f8d7b.css.map",
+    "main.994e7e0b.js.map": "/WWF-Korea/static/js/main.994e7e0b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.071f8d7b.css",
+    "static/js/main.994e7e0b.js"
+  ]
+}
