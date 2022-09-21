@@ -1,15 +1,15 @@
 :root {
-  --mc: #E98300;
+  --mc: #e98300;
 }
 
-* {
+/* * {
   outline: 1px solid #f00;
-}
+} */
 
 body {
   letter-spacing: 0.04em;
   background-color: #000;
-  color: #1B1B1B;
+  color: #1b1b1b;
 }
 
 button {
@@ -78,19 +78,24 @@ button {
 }
 
 .mainVisual .item01 {
-  background: url(../public/assets/images/main_mb01.jpg) no-repeat center center/cover;
+  background: url(../public/assets/images/main_mb01.jpg) no-repeat center
+    center/cover;
 }
 .mainVisual .item02 {
-  background: url(../public/assets/images/main_mb02.jpg) no-repeat center center/cover;
+  background: url(../public/assets/images/main_mb02.jpg) no-repeat center
+    center/cover;
 }
 .mainVisual .item03 {
-  background: url(../public/assets/images/main_mb03.jpg) no-repeat center center/cover;
+  background: url(../public/assets/images/main_mb03.jpg) no-repeat center
+    center/cover;
 }
 .mainVisual .item04 {
-  background: url(../public/assets/images/main_mb04.jpg) no-repeat center center/cover;
+  background: url(../public/assets/images/main_mb04.jpg) no-repeat center
+    center/cover;
 }
 .mainVisual .item05 {
-  background: url(../public/assets/images/main_mb05.jpg) no-repeat center center/cover;
+  background: url(../public/assets/images/main_mb05.jpg) no-repeat center
+    center/cover;
 }
 
 .mainVisual .visual_text {
@@ -103,16 +108,16 @@ button {
 }
 
 .mainVisual figure h2 {
-  font-size: 24px;
+  font-size: 32px;
   font-weight: 900;
-  line-height: 30px;
+  line-height: 36px;
   margin-bottom: 16px;
 }
 .mainVisual figure p {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
-  line-height: 20px;
-  margin-bottom: 30px;
+  line-height: 25px;
+  margin-bottom: 50px;
 }
 
 .mainVisual figure span {
@@ -141,7 +146,7 @@ button {
 }
 
 .WWFSponsor .container h2::after {
-  content:"";
+  content: "";
   width: 16px;
   height: 2px;
   background-color: var(--mc);
@@ -151,13 +156,13 @@ button {
   transform: translateX(-50%);
 }
 
-.WWFSponsor .container p {
-  font-size: 16px;
-  line-height: 28px;
+.sponsor_title_tit {
+  font-size: 15px;
+  line-height: 26px;
   font-weight: 400;
 }
 
-.WWFSponsor .container p>strong {
+.sponsor_title_tit > strong {
   font-weight: 700;
 }
 
@@ -170,11 +175,97 @@ button {
   border-radius: 15px;
 }
 
-@media screen and (min-width: 1200px) {
-  .container {
-      width: 1500px;
-      margin: 0 auto;
+.sponsor figure {
+  padding: 35px 26px;
 }
 
+.sponsor_name {
+  display: block;
+  font-size: 26px;
+  text-align: left;
+  margin-bottom: 15px;
+}
 
+.sponsor_info {
+  font-size: 14px;
+  color: var(--mc);
+  margin-left: 6px;
+}
+
+.sponsor_tit {
+  font-size: 14px;
+  line-height: 22px;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1500px;
+    margin: 0 auto;
+  }
+
+  .mainVisual .item01 {
+    background: url(../public/assets/images/main_pc01.png) no-repeat center
+      center/cover;
+  }
+  .mainVisual .item02 {
+    background: url(../public/assets/images/main_pc02.jpg) no-repeat center
+      center/cover;
+  }
+  .mainVisual .item03 {
+    background: url(../public/assets/images/main_pc03.png) no-repeat center
+      center/cover;
+  }
+  .mainVisual .item04 {
+    background: url(../public/assets/images/main_pc04.jpeg) no-repeat center
+      center/cover;
+  }
+  .mainVisual .item05 {
+    background: url(../public/assets/images/main_pc05.jpg) no-repeat center
+      center/cover;
+  }
+
+  .mainVisual .visual_text {
+    width: 1500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: flex-end;
+    text-align: right;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(30%);
+  }
+
+  .mainVisual figure h2 {
+    width: 1000px;
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 58.09px;
+    margin-bottom: 16px;
+  }
+  .mainVisual figure p {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 20px;
+    margin-bottom: 34px;
+  }
+  
+  .mainVisual figure span {
+    font-size: 18px;
+    font-weight: 700;
+    background-color: var(--mc);
+    padding: 12px 42px;
+  }
+
+  .mainVisual {
+    height: 100vh;
+    color: #fff;
+    white-space: normal;
+    text-align: center;
+  }
 }
