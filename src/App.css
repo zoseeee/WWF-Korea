@@ -203,6 +203,69 @@ button {
   margin-bottom: 30px;
 }
 
+.cp-top {
+  display: flex;
+}
+
+.campaignSwiper01 {
+  transform: rotate(180deg);
+}
+
+.campaignSwiper01 figure {
+  transform: rotate(180deg);
+}
+
+.campaignSwiper01 .item01 {
+  width: 100%;
+  height: 100%;
+  background-color: #00C28A;
+}
+.campaignSwiper01 .item02 {
+  width: 100%;
+  height: 100%;
+  background-color: #ffc20e;
+}
+.campaignSwiper01 .item03 {
+  width: 100%;
+  height: 100%;
+  background-color: #ff6b56;
+}
+
+.campaignSwiper02 figure {
+  width: 100%;
+  height: 100%;
+}
+
+.campaignSwiper02 figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.campaignSwiper03 .item01 {
+  width: 100%;
+  height: 100%;
+  background-color: #0A6C5B;
+}
+.campaignSwiper03 .item02 {
+  width: 100%;
+  height: 100%;
+  background-color: #f88424;
+}
+.campaignSwiper03 .item03 {
+  width: 100%;
+  height: 100%;
+  background-color: #d53535;
+}
+
+.campaignSwiper04 {
+  background-color: #fff;
+}
+
+.cp-bottom {
+  display: flex;
+}
+
 .EarthHour {
   padding-bottom: 70px;
   background: url(../public/assets/images/all_bg.png);
@@ -233,7 +296,7 @@ button {
   display: flex;
   white-space: nowrap;
   overflow-x: scroll;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 .Elist_items::-webkit-scrollbar {
@@ -272,13 +335,13 @@ button {
 }
 
 .EIMG {
-  margin-bottom: 70px;
+  margin-bottom: 40px;
 }
 
 .content.container h3 {
   position: relative;
-  font-size: 20px;
-  margin-bottom: 50px;
+  font-size: 22px;
+  margin-bottom: 60px;
   text-align: center;
   z-index: 999;
 }
@@ -299,15 +362,18 @@ button {
 .content.container .text01 {
   width: 90%;
   margin: 0 auto;
-  margin-bottom: 20px;
+  margin-bottom: 60px;
   line-height: 30px;
+  font-size: 14px;
 }
 
 .content.container .text02 {
+  position: relative;
   width: 90%;
   margin: 0 auto;
   line-height: 30px;
   font-weight: 700;
+  font-size: 16px;
 }
 
 .title__box {

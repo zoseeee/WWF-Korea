@@ -31,7 +31,6 @@ const DB = [
   },
 ];
 
-
 const MainVisual = () => {
   const [idx, setIDX] = useState();
   useEffect(() => {

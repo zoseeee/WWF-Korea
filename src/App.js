@@ -3,6 +3,7 @@ import Wrapper from "./component/Wrapper";
 import Header from "./component/Header";
 import MainVisual from "./component/MainVisual";
 import WWFSponsor from "./component/WWFSponsor";
+import WWFCampaign from "./component/WWFCampaign";
 import { Routes, Route } from "react-router-dom";
 import EarthHour from "./component/EarthHour";
 import Why from "./component/Why";
@@ -15,7 +16,7 @@ function App() {
       <Header />
       <main>
         <MainVisual />
-        <WWFSponsor />
+        <WWFCampaign />
         <Routes>
           <Route path="/main" element={<EarthHour />} />
           <Route path="/why" element={<Why />} />
@@ -23,6 +24,7 @@ function App() {
           <Route path="/howTo" element={<HowTo />} />
           <Route path="*" element={<HowTo />} />
         </Routes>
+        <WWFSponsor />
       </main>
     </Wrapper>
   );
