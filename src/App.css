@@ -1,5 +1,6 @@
 :root {
   --mc: #e98300;
+  --bc: #1b1b1b;
 }
 
 /* * {
@@ -9,7 +10,7 @@
 body {
   letter-spacing: 0.04em;
   background-color: #000;
-  color: #1b1b1b;
+  color: #fff;
 }
 
 button {
@@ -129,8 +130,8 @@ button {
 
 .WWFSponsor {
   color: #ffffff;
-  text-align: center;
   padding: 100px 0;
+  background: url(../public/assets/images/all_bg.png);
 }
 
 .WWFSponsor .container {
@@ -143,6 +144,7 @@ button {
   font-size: 30px;
   font-weight: 700;
   margin-bottom: 40px;
+  text-align: center;
 }
 
 .WWFSponsor .container h2::after {
@@ -157,9 +159,11 @@ button {
 }
 
 .sponsor_title_tit {
+  width: 95%;
   font-size: 15px;
   line-height: 26px;
   font-weight: 400;
+  margin: 0 auto;
 }
 
 .sponsor_title_tit > strong {
@@ -198,6 +202,125 @@ button {
   text-align: left;
   margin-bottom: 30px;
 }
+
+.EarthHour {
+  padding-bottom: 70px;
+  background: url(../public/assets/images/all_bg.png);
+}
+
+.title_bg {
+  background: url(../public/assets/images/ori_1.png) center center/cover;
+}
+
+.earthHour_title .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 0;
+}
+
+.earthHour_title span {
+  font-size: 14px;
+  margin-bottom: 36px;
+}
+
+.earthHour_title h2 {
+  font-size: 38px;
+  font-weight: 700;
+}
+
+.Elist_items {
+  display: flex;
+  white-space: nowrap;
+  overflow-x: scroll;
+  margin-bottom: 30px;
+}
+
+.Elist_items::-webkit-scrollbar {
+  width: 20px;
+}
+
+.Elist_items::-webkit-scrollbar-thumb {
+  background-color: var(--mc); /*스크롤바의 색상*/
+  background-clip: padding-box;
+  border:6px solid transparent;
+  border-radius: 15px;
+}
+
+.Elist_items::-webkit-scrollbar-track {
+  background-color: #000; /*스크롤바 트랙 색상*/
+  border-top: 1px solid #353535;
+}
+
+.Elist_items li .active {
+  color: var(--mc);
+}
+
+.Elist_items li a {
+  padding: 20px 30px;
+  font-size: 16px;
+  display: block;
+}
+
+.content.container {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.EIMG {
+  margin-bottom: 70px;
+}
+
+.content.container h3 {
+  position: relative;
+  font-size: 20px;
+  margin-bottom: 50px;
+  text-align: center;
+  z-index: 999;
+}
+
+.content.container h3 strong {
+  color: var(--mc);
+}
+
+.cube {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  transform:translate(-50%, -50%) rotate(34deg);
+}
+
+.content.container .text01 {
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  line-height: 30px;
+}
+
+.content.container .text02 {
+  width: 90%;
+  margin: 0 auto;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+.title__box {
+  position: relative;
+}
+
+
+
+
+
+
+
+
 
 @media screen and (min-width: 1200px) {
   .container {
@@ -254,7 +377,7 @@ button {
     line-height: 20px;
     margin-bottom: 34px;
   }
-  
+
   .mainVisual figure span {
     font-size: 18px;
     font-weight: 700;
