@@ -10,8 +10,8 @@ import { EffectCreative, Pagination } from "swiper";
 
 const CB = [
   { id: 1, content: "CLIMATE CRISIS", desc: "WWF CAMPAIGN" },
-  { id: 2, content: "CLIMATE CRISIS", desc: "WWF CAMPAIGN" },
-  { id: 3, content: "CLIMATE CRISIS", desc: "WWF CAMPAIGN" },
+  { id: 2, content: "PLASTIC FREE", desc: "WWF CAMPAIGN" },
+  { id: 3, content: "POLARBEAR", desc: "WWF CAMPAIGN" },
 ];
 
 const FB = [{ id: 1 }, { id: 2 }, { id: 3 }];
@@ -19,17 +19,19 @@ const FB = [{ id: 1 }, { id: 2 }, { id: 3 }];
 const DB = [
   {
     id: 1,
-    content: "기후변화를 넘어선 ‘기후위기’ 브레이크를 잡아야 할 때입니다.",
+    content: "기후변화를 넘어선 ‘기후위기’\n브레이크를 잡아야 할 때입니다.",
   },
   {
     id: 2,
-    content: "기후변화를 넘어선 ‘기후위기’ 브레이크를 잡아야 할 때입니다.",
+    content: "넘쳐나는 플라스틱 문제는\n인간의 생명까지 위협하고 있습니다.",
   },
   {
     id: 3,
-    content: "기후변화를 넘어선 ‘기후위기’ 브레이크를 잡아야 할 때입니다.",
+    content: "기후변화로 인한 북극곰의 위기는\n현재도 진행 중입니다.",
   },
 ];
+
+const GB = [{ id: 1 }, { id: 2 }, { id: 3 }];
 
 const WWFCampaign = () => {
   const swiperStyle01 = {
@@ -48,7 +50,6 @@ const WWFCampaign = () => {
     width: "55%",
     height: "370px",
   };
-
 
   return (
     <section className="WWFCampaign">
@@ -74,7 +75,6 @@ const WWFCampaign = () => {
             },
           }}
           modules={[EffectCreative, Pagination, Controller]}
-
           className="campaignSwiper01"
         >
           {CB.map((slide) => (
@@ -95,7 +95,6 @@ const WWFCampaign = () => {
           style={swiperStyle02}
           loop={true}
           modules={[Controller]}
-
           className="campaignSwiper02"
         >
           {FB.map((slide, idx) => (
@@ -145,10 +144,14 @@ const WWFCampaign = () => {
           ))}
         </Swiper>
         {/* ------ Swiper04 ------ */}
-        <Swiper style={swiperStyle04} className="campaignSwiper04">
-          <SwiperSlide>1</SwiperSlide>
-          <SwiperSlide>2</SwiperSlide>
-          <SwiperSlide>3</SwiperSlide>
+        <Swiper style={swiperStyle04} loop={true} className="campaignSwiper04">
+          {GB.map((slide, idx) => (
+            <SwiperSlide>
+              <div className={"item0" + slide.id}>
+                <strong>{"0" + slide.id}</strong>
+              </div>
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
     </section>

@@ -9,6 +9,7 @@ import EarthHour from "./component/EarthHour";
 import Why from "./component/Why";
 import HowTo from "./component/HowTo";
 import Who from "./component/Who";
+import Footer from "./component/Footer";
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
       <Header />
       <main>
         <MainVisual />
-        <WWFCampaign />
+        <WWFSponsor />
         <Routes>
           <Route path="/main" element={<EarthHour />} />
           <Route path="/why" element={<Why />} />
@@ -24,8 +25,9 @@ function App() {
           <Route path="/howTo" element={<HowTo />} />
           <Route path="*" element={<HowTo />} />
         </Routes>
-        <WWFSponsor />
+        <WWFCampaign />
       </main>
+      <Footer />
     </Wrapper>
   );
 }

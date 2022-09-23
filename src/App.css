@@ -3,9 +3,9 @@
   --bc: #1b1b1b;
 }
 
-/* * {
+* {
   outline: 1px solid #f00;
-} */
+}
 
 body {
   letter-spacing: 0.04em;
@@ -211,6 +211,23 @@ button {
   transform: rotate(180deg);
 }
 
+.campaignSwiper01 p {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 40px;
+  letter-spacing: 0.07em;
+}
+
+.campaignSwiper01 p::after {
+  content: "\e93f";
+  font-family: xeicon !important;
+}
+
+.campaignSwiper01 h2 {
+  font-size: 70px;
+  font-weight: 900;
+}
+
 .campaignSwiper01 figure {
   transform: rotate(180deg);
 }
@@ -218,7 +235,7 @@ button {
 .campaignSwiper01 .item01 {
   width: 100%;
   height: 100%;
-  background-color: #00C28A;
+  background-color: #00c28a;
 }
 .campaignSwiper01 .item02 {
   width: 100%;
@@ -229,6 +246,13 @@ button {
   width: 100%;
   height: 100%;
   background-color: #ff6b56;
+}
+
+.campaignSwiper01 .visual_text {
+  position: absolute;
+  top: 75px;
+  right: 83px;
+  text-align: right;
 }
 
 .campaignSwiper02 figure {
@@ -242,10 +266,25 @@ button {
   object-fit: cover;
 }
 
+.campaignSwiper03 {
+  font-size: 32px;
+  font-weight: 500;
+  white-space: pre-wrap;
+  text-align: right;
+}
+
+.campaignSwiper03 p {
+  display: block;
+  position: absolute;
+  top: 75px;
+  right: 83px;
+  line-height: 42px;
+}
+
 .campaignSwiper03 .item01 {
   width: 100%;
   height: 100%;
-  background-color: #0A6C5B;
+  background-color: #0a6c5b;
 }
 .campaignSwiper03 .item02 {
   width: 100%;
@@ -260,6 +299,7 @@ button {
 
 .campaignSwiper04 {
   background-color: #fff;
+  color: var(--bc);
 }
 
 .cp-bottom {
@@ -306,7 +346,7 @@ button {
 .Elist_items::-webkit-scrollbar-thumb {
   background-color: var(--mc); /*스크롤바의 색상*/
   background-clip: padding-box;
-  border:6px solid transparent;
+  border: 6px solid transparent;
   border-radius: 15px;
 }
 
@@ -356,7 +396,7 @@ button {
   left: 0;
   width: 100px;
   height: 100px;
-  transform:translate(-50%, -50%) rotate(34deg);
+  transform: translate(-50%, -50%) rotate(34deg);
 }
 
 .content.container .text01 {
@@ -376,17 +416,13 @@ button {
   font-size: 16px;
 }
 
+.content.container .text02 strong {
+  color: var(--mc);
+}
+
 .title__box {
   position: relative;
 }
-
-
-
-
-
-
-
-
 
 @media screen and (min-width: 1200px) {
   .container {

@@ -1,5 +1,5 @@
-import React from 'react'
-import EList from './EList'
+import React from "react";
+import EList from "./EList";
 
 const Why = () => {
   return (
@@ -17,10 +17,13 @@ const Why = () => {
       <EList />
       <div className="content">
         <div className="content container">
-            <figure className="EIMG">
-                <img src={process.env.PUBLIC_URL + "/assets/images/earth01.png"} alt="" />
-            </figure>
-            
+          <figure className="EIMG">
+            <img
+              src={process.env.PUBLIC_URL + "/assets/images/earth03.jpg"}
+              alt=""
+            />
+          </figure>
+
           <p className="text01">
             WWF는 인류가 만든 기후위기와 환경파괴의 심각성을 깨닫고 변화를
             만들기 위해 어스아워(Earth Hour)를 시작했습니다. 2007년 호주에서
@@ -30,19 +33,24 @@ const Why = () => {
           </p>
           <div className="title__box">
             <figure className="cube">
-            <img src={process.env.PUBLIC_URL + "/assets/images/cube.gif"} alt="" />
-          </figure>
-            <h3>전등을 끄고 생명의 빛을 켜는<strong> 1시간.</strong></h3>
-            </div>
+              <img
+                src={process.env.PUBLIC_URL + "/assets/images/cube.gif"}
+                alt=""
+              />
+            </figure>
+            <h3>
+              <strong>왜 </strong>하나요?
+            </h3>
+          </div>
           <p className="text02">
-            매년 3월 마지막 토요일 저녁 8시 반부터 진행하는 어스아워의 ‘1시간
-            소등’은 사람과 자연이 조화롭게 살아가는 미래를 만들자는 세계적인
-            약속의 상징이 되고 있습니다.
+            기후위기의 심각성을 알리고,
+            나아가 저탄소 사회 실현을 위해 목소리를
+            높이기 위해서 어스아워를 진행하고 있습니다.
           </p>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Why
+export default Why;
