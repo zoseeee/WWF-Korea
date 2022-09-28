@@ -38,7 +38,7 @@ const WWFSponsor = () => {
         </div>
         <Swiper className="sponsor" style={swiperStyle}>
           {DB.map((slide) => (
-            <SwiperSlide>
+            <SwiperSlide key={slide.id}>
               <figure className={"item0" + slide.id}>
                 <strong className="sponsor_name">
                   {slide.content}
@@ -46,13 +46,21 @@ const WWFSponsor = () => {
                 </strong>
                 <p className="sponsor_tit">{slide.desc}</p>
                 <Swiper loop={true} className="sponsorPT">
-                 {
-                  SB.map((sld) => (
-                    <SwiperSlide>
-                        <img src={process.env.PUBLIC_URL + "/assets/images/sponsor0" + slide.id + "_t0" + sld.id + ".png"} alt="" />
+                  {SB.map((sld) => (
+                    <SwiperSlide key={sld.id}>
+                      <img
+                        src={
+                          process.env.PUBLIC_URL +
+                          "/assets/images/sponsor0" +
+                          slide.id +
+                          "_t0" +
+                          sld.id +
+                          ".png"
+                        }
+                        alt=""
+                      />
                     </SwiperSlide>
-                  ))
-                 }
+                  ))}
                 </Swiper>
               </figure>
             </SwiperSlide>

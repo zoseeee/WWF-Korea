@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import { Autoplay } from "swiper";
+import "swiper/css/navigation";
+import SwiperCore, { Autoplay, Navigation } from "swiper";
 
 const DB = [
   {
@@ -32,10 +33,34 @@ const DB = [
 ];
 
 const MainVisual = () => {
-  const [idx, setIDX] = useState();
+  const [IDX, setIDX] = useState();
   useEffect(() => {
     setIDX(0);
   }, []);
+
+  const [swiper, setSwiper] = useState(null);
+  const [mainImageIndex, setmainImageIndex] = useState(0);
+
+  SwiperCore.use([Navigation]);
+
+  const navigationPrevRef = useRef(null);
+  const navigationNextRef = useRef(null);
+
+  const swiperParams = {
+    navigation: {
+      prevEl: navigationPrevRef.current,
+      nextEl: navigationNextRef.current,
+    },
+    onBeforeInit: (swiper) => {
+      swiper.params.navigation.prevEl = navigationPrevRef.current;
+      swiper.params.navigation.nextEl = navigationNextRef.current;
+      swiper.activeIndex = mainImageIndex;
+      swiper.navigation.update();
+    },
+    onSwiper: setSwiper,
+    onSlideChange: (e) => setmainImageIndex(e.activeIndex),
+  };
+
   const swiperStyle = {
     width: "100%",
   };
@@ -43,18 +68,24 @@ const MainVisual = () => {
   return (
     <section className="MainVisual">
       <Swiper
+        {...swiperParams}
+        ref={setSwiper}
         style={swiperStyle}
         loop={true}
         autoplay={{
           delay: 7000,
           disableOnInteraction: true,
         }}
-        modules={[Autoplay]}
+        modules={[Autoplay, Navigation]}
         className="mainVisual"
       >
-        {DB.map((slide) => (
-          <SwiperSlide>
-            <figure className={"item0" + slide.id}>
+        {DB.map((slide, IDX) => (
+          <SwiperSlide key={slide.id}>
+            <figure
+              className={
+                "item0" + slide.id + (IDX === mainImageIndex - 1 ? " on" : "")
+              }
+            >
               <div className="container">
                 <div className="visual_text">
                   <h2>{slide.content}</h2>
@@ -67,6 +98,18 @@ const MainVisual = () => {
             </figure>
           </SwiperSlide>
         ))}
+        <button ref={navigationPrevRef} className="prevBtn">
+          <img
+            alt="prevButton"
+            src={process.env.PUBLIC_URL + "/assets/images/icon_arrow_prev.png"}
+          />
+        </button>
+        <button ref={navigationNextRef} className="nextBtn">
+          <img
+            alt="NextButton"
+            src={process.env.PUBLIC_URL + "/assets/images/icon_arrow_next.png"}
+          />
+        </button>
       </Swiper>
     </section>
   );

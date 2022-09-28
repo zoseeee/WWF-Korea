@@ -1,5 +1,5 @@
-import React, { useRef, useState } from "react";
-import { Controller } from "swiper";
+import React, { useState } from "react";
+import SwiperCore, { Controller } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -51,9 +51,12 @@ const WWFCampaign = () => {
     height: "370px",
   };
 
+const [controlledSwiper, setControlledSwiper] = useState(null);
+
   return (
     <section className="WWFCampaign">
       <div className="cp-top">
+
         {/* ------ Swiper01 ------ */}
         <Swiper
           style={swiperStyle01}
@@ -75,10 +78,11 @@ const WWFCampaign = () => {
             },
           }}
           modules={[EffectCreative, Pagination, Controller]}
+          controller={{control: controlledSwiper }}
           className="campaignSwiper01"
         >
           {CB.map((slide) => (
-            <SwiperSlide>
+            <SwiperSlide key={slide.id}>
               <figure className={"item0" + slide.id}>
                 <div className="container">
                   <div className="visual_text">
@@ -90,15 +94,15 @@ const WWFCampaign = () => {
             </SwiperSlide>
           ))}
         </Swiper>
+
         {/* ------ Swiper02 ------ */}
         <Swiper
           style={swiperStyle02}
           loop={true}
-          modules={[Controller]}
           className="campaignSwiper02"
         >
           {FB.map((slide, idx) => (
-            <SwiperSlide>
+            <SwiperSlide key={slide.id}>
               <figure className={"item0" + slide.id}>
                 <img
                   src={
@@ -115,7 +119,8 @@ const WWFCampaign = () => {
         </Swiper>
       </div>
       <div className="cp-bottom">
-        {/* ------ Swiper03 ------ */}
+
+      {/* ------ Swiper03 ------ */}
         <Swiper
           style={swiperStyle03}
           direction={"vertical"}
@@ -132,21 +137,23 @@ const WWFCampaign = () => {
               translate: [0, "100%", 0],
             },
           }}
-          modules={[EffectCreative]}
+          modules={[EffectCreative, Controller]}
+          onSwiper={setControlledSwiper}
           className="campaignSwiper03"
         >
           {DB.map((slide, idx) => (
-            <SwiperSlide>
+            <SwiperSlide key={slide.id}>
               <div className={"item0" + slide.id}>
                 <p>{slide.content}</p>
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
+
         {/* ------ Swiper04 ------ */}
         <Swiper style={swiperStyle04} loop={true} className="campaignSwiper04">
           {GB.map((slide, idx) => (
-            <SwiperSlide>
+            <SwiperSlide key={slide.id}>
               <div className={"item0" + slide.id}>
                 <strong>{"0" + slide.id}</strong>
               </div>
