@@ -2,7 +2,8 @@ import React, { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-import SwiperCore, { Autoplay, Navigation } from "swiper";
+import "swiper/css/pagination";
+import SwiperCore, { Autoplay, Navigation, Pagination } from "swiper";
 
 const DB = [
   {
@@ -68,15 +69,16 @@ const MainVisual = () => {
   return (
     <section className="MainVisual">
       <Swiper
+        modules={[Autoplay, Navigation, Pagination]}
         {...swiperParams}
         ref={setSwiper}
         style={swiperStyle}
         loop={true}
+        pagination={{ clickable: true }}
         autoplay={{
-          delay: 7000,
+          delay: 5000,
           disableOnInteraction: true,
         }}
-        modules={[Autoplay, Navigation]}
         className="mainVisual"
       >
         {DB.map((slide, IDX) => (

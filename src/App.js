@@ -25,7 +25,7 @@ function App() {
           <Route path="/howTo" element={<HowTo />} />
           <Route path="*" element={<HowTo />} />
         </Routes>
-        {/* <WWFCampaign /> */}
+        <WWFCampaign />
       </main>
       <Footer />
     </Wrapper>

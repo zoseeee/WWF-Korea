@@ -23,8 +23,8 @@ const Why = () => {
               alt=""
             />
           </figure>
-
-          <p className="text01">
+<div className="text__gp">
+<p className="text01">
             WWF는 인류가 만든 기후위기와 환경파괴의 심각성을 깨닫고 변화를
             만들기 위해 어스아워(Earth Hour)를 시작했습니다. 2007년 호주에서
             처음 시작된 어스아워는 현재 190여 개국 7,000여 개 도시, 1만 8,000여
@@ -39,7 +39,7 @@ const Why = () => {
               />
             </figure>
             <h3>
-              <strong>왜 </strong>하나요?
+              어스아워, <strong>왜 </strong>하나요?
             </h3>
           </div>
           <p className="text02">
@@ -47,6 +47,8 @@ const Why = () => {
             나아가 저탄소 사회 실현을 위해 목소리를
             높이기 위해서 어스아워를 진행하고 있습니다.
           </p>
+</div>
+        
         </div>
       </div>
     </section>

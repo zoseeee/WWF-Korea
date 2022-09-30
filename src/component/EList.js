@@ -10,7 +10,8 @@ const DATALINK = [
 
 const EList = () => {
   return (
-    <ul className="Elist_items">
+    <div className="Elist">
+ <ul className="Elist_items">
       {DATALINK.map((it, idx) => {
         return (
           <li key={idx}>
@@ -19,6 +20,8 @@ const EList = () => {
         );
       })}
     </ul>
+    </div>
+   
   );
 };
 

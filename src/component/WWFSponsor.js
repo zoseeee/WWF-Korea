@@ -1,6 +1,9 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import SwiperCore, { Autoplay, Navigation, Pagination } from "swiper";
 
 const DB = [
   {
@@ -29,23 +32,39 @@ const WWFSponsor = () => {
           <h2>WWF-KOREA 홍보대사</h2>
           <p className="sponsor_title_tit">
             WWF-Korea 홍보대사 및 WWF 글로벌 홍보대사는 멸종위기종 및 서식지
-            보전, 기후위기 대응을 위한 WWF의 자연보전 활동을 널리 알리고,{" "}
+            보전, 기후위기 대응을 위한 WWF의 자연보전 활동을 널리 알리고, <br />
             <strong>
               많은 이들의 동참을 끌어내기 위한 다양한 캠페인, 이니셔티브에
               참여하며 선한 영향력을 발휘하고 있습니다.
             </strong>
           </p>
         </div>
-        <Swiper className="sponsor" style={swiperStyle}>
+        <Swiper
+          className="sponsor"
+          style={swiperStyle}
+          navigation
+          modules={[Navigation]}
+        >
           {DB.map((slide) => (
-            <SwiperSlide key={slide.id}>
+            <SwiperSlide key={slide.id} className="sponsor_items">
               <figure className={"item0" + slide.id}>
-                <strong className="sponsor_name">
-                  {slide.content}
-                  <span className="sponsor_info">{slide.info}</span>
-                </strong>
-                <p className="sponsor_tit">{slide.desc}</p>
-                <Swiper loop={true} className="sponsorPT">
+                <div className="text_group">
+                  <strong className="sponsor_name">
+                    {slide.content}
+                    <span className="sponsor_info">{slide.info}</span>
+                  </strong>
+                  <p className="sponsor_tit">{slide.desc}</p>
+                </div>
+                <Swiper
+                  modules={[Pagination]}
+                  className="sponsorPT"
+                  loop={true}
+                  pagination={{ clickable: true }}
+                  autoplay={{
+                    delay: 5000,
+                    disableOnInteraction: true,
+                  }}
+                >
                   {SB.map((sld) => (
                     <SwiperSlide key={sld.id}>
                       <img
